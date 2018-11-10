@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Flatrok 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="None" href="index.html#document-index" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html#document-index">Flatrok 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="flatrok-theme-documentation">
+<h1>Flatrok Theme Documentation<a class="headerlink" href="#flatrok-theme-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="twocol container">
+<div class="leftside container">
+<p>Welcome to Flatrok Theme documentaion!</p>
+<div class="line-block">
+<div class="line"><strong>Created:</strong> <em>November 24, 2013</em></div>
+<div class="line"><strong>Theme By:</strong> <em>Polonel</em></div>
+<div class="line"><strong>Email:</strong> <a class="reference external" href="mailto:polonel&#37;&#52;&#48;gmail&#46;com">polonel<span>&#64;</span>gmail<span>&#46;</span>com</a></div>
+<div class="line"><strong>Online Documentation:</strong> <a class="reference external" href="http://www.polonel.com/themes/Flatrok/docs">Online Documentation</a></div>
+<div class="line"><tt class="docutils literal"><span class="pre">Last</span> <span class="pre">updated:</span> <span class="pre">December</span> <span class="pre">1,</span> <span class="pre">2013</span></tt></div>
+</div>
+</div>
+<div class="rightside container">
+<a class="reference internal image-reference" href="_images/Themes_NOTEXT.png"><img alt="_images/Themes_NOTEXT.png" class="align-right" src="_images/Themes_NOTEXT.png" style="width: 350.0px;" /></a>
+</div>
+</div>
+<div class="clear container">
+<img alt="_images/spacer.png" src="_images/spacer.png" />
+</div>
+<div class="section" id="introduction">
+<span id="index-0"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Thank you for purchasing Flatrok Theme. This documentation is focused on helping
+you setup and customize the Flatrok Theme. If you find that this documentation does
+not provide you with the required information, please feel free to email via my
+user page contact form <a class="reference external" href="http://themeforest.net/user/polonel">here</a>.</p>
+<div class="section" id="folder-structure">
+<span id="index-1"></span><h3>Folder Structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h3>
+<p>This theme is organized in the following folder structure:</p>
+<div class="highlight-python"><pre>├── css                 -- CSS Stylesheets
+│   └── less            -- LESS Stylesheets
+├── docs                -- Documentation
+│   └── License         -- License Information for various plugins
+├── fonts               -- Fonts used in this theme
+├── images              -- Images used in this theme
+│   └── fancybox        -- Images for the fancyBox plugin
+├── js                  -- Javascript plugins and custom scripts
+└── php                 -- PHP scripts for contact form</pre>
+</div>
+<div class="section" id="table-of-contents">
+<h4>Table of Contents:<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h4>
+<div class="toctree-wrapper compound">
+<span id="document-htmlstruct"></span><div class="section" id="html-structure">
+<h5>HTML Structure<a class="headerlink" href="#html-structure" title="Permalink to this headline">¶</a></h5>
+<p>Flatrok theme is a responsive layout using the <a class="reference external" href="http://getbootstrap.com/">Bootstrap framework (ver. 3)</a>
+Each content sections is labeled with an <tt class="docutils literal"><span class="pre">id</span></tt>. <tt class="docutils literal"><span class="pre">(ex:</span> <span class="pre">&lt;div</span> <span class="pre">id=&quot;profile&quot;&gt;&lt;/div&gt;)</span></tt>. Many classes associated with each
+<tt class="docutils literal"><span class="pre">div</span></tt> are related to the <cite>bootstrap framework</cite>. For more information regarding bootstrap classes please refer to the bootstrap docs, located <a class="reference external" href="http://getbootstrap.com">here</a>.
+You will find that the html file, <tt class="docutils literal"><span class="pre">index.html</span></tt> is well commented on each section. Refer to the documentation below for more information.</p>
+<div class="section" id="social-links-section">
+<span id="index-0"></span><h6>Social Links Section<a class="headerlink" href="#social-links-section" title="Permalink to this headline">¶</a></h6>
+<p>Remove / Update the social links using <a class="reference external" href="http://fontawesome.io/">FontAwesome</a> set class names.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information on FontAwesome class names, please refer to <a class="reference external" href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">FontAwesome CheatSheet</a>.</p>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!--Social Links--&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container social-links hidden-xs&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#contact&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-rss&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-facebook&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-twitter&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-google-plus&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-linkedin&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-github&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When changing social links in the header, the footer social links will update accordingly.</p>
+</div>
+</div>
+<div class="section" id="page-header">
+<span id="index-1"></span><h6>Page Header<a class="headerlink" href="#page-header" title="Permalink to this headline">¶</a></h6>
+<p>The page header sections is marked with a class <tt class="docutils literal"><span class="pre">page-head</span></tt> and it contains your profile picture, name, quote, job tag and navigation. These elements are shown below:</p>
+<div class="section" id="profile-picture-quote-and-jobtag">
+<span id="index-2"></span><h7>Profile Picture, Quote and Jobtag<a class="headerlink" href="#profile-picture-quote-and-jobtag" title="Permalink to this headline">¶</a></h7>
+<p>To change the profile picture, update the URL of the <tt class="docutils literal"><span class="pre">&lt;img&gt;</span></tt> tag. The name and quote displayed are both inside the <tt class="docutils literal"><span class="pre">&lt;div</span> <span class="pre">class=&quot;tagline&quot;&gt;</span></tt>.</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12 col-md-12&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;profile-pic&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;images/profile.png&quot;</span> <span class="na">width=</span><span class="s">&quot;181&quot;</span> <span class="na">height=</span><span class="s">&quot;181&quot;</span> <span class="na">alt=</span><span class="s">&quot;Profile picture.&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tagline&quot;</span><span class="nt">&gt;</span>Joe Smith<span class="nt">&lt;span&gt;</span>Going forward, one line at a time.<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;clearfix&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;jobtag&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span&gt;</span>Developer<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="navigation">
+<span id="index-3"></span><h7>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h7>
+<p>The navigation menu is made up of a wrapper, nav-bar class, and an unordered list of nav-items. Each list item has a child
+anchor element which has a nested div. The nested <tt class="docutils literal"><span class="pre">&lt;div</span> <span class="pre">class=&quot;oval&quot;&gt;</span></tt> is the actual nav button to change.</p>
+<p>For example if you wanted to change the icon displayed for the profile section:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oval&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-home&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>Profile<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p>you would change the class name <tt class="docutils literal"><span class="pre">fa-home</span></tt> to a different FontAwesome icon class:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oval&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-user&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>Profile<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!--Navigation--&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav-wrapper&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav-bar&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item profile-bg&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#profile&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oval&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-home&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>Profile<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item resume-bg&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#resume&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oval&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-file-text&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>Resume<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item portfolio-bg&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#portfolio&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oval&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-book&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>Portfolio<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-item contact-bg&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#contact&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;oval&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-envelope&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>Contact<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!--End Navigation --&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="profile">
+<span id="index-4"></span><h6>Profile<a class="headerlink" href="#profile" title="Permalink to this headline">¶</a></h6>
+<p>At the start of the profile section, there is a general overview area. This area is a standard div with a class of info.
+Edit the contents of <tt class="docutils literal"><span class="pre">&lt;p&gt;</span></tt> to update this sections.</p>
+<div class="section" id="information">
+<h7>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h7>
+<p>The information sections contains information about yourself.</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!--Profile Information--&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-12 col-sm-3 col-md-offset-1 col-md-3&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Profile<span class="nt">&lt;/h2&gt;</span>
+
+    <span class="nt">&lt;h3&gt;</span>Information<span class="nt">&lt;/h3&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;profile-information&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item&quot;</span><span class="nt">&gt;</span>Name: <span class="nt">&lt;span&gt;</span>Joe Smith<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item&quot;</span><span class="nt">&gt;</span>Age: <span class="nt">&lt;span&gt;</span>27<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item&quot;</span><span class="nt">&gt;</span>From: <span class="nt">&lt;span&gt;</span>USA<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item&quot;</span><span class="nt">&gt;</span>Lives In: <span class="nt">&lt;span&gt;</span>New York, NY<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item&quot;</span><span class="nt">&gt;</span>Likes:
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;tag-area&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Programming<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Running<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Sports<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Design<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Cars<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!--End Profile Information --&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="skills">
+<h7>Skills<a class="headerlink" href="#skills" title="Permalink to this headline">¶</a></h7>
+<p>The skills section is broken down into two divs. The center column and the right column. The center column is commented as <tt class="docutils literal"><span class="pre">&lt;!--Profile</span> <span class="pre">Skills</span> <span class="pre">Section</span> <span class="pre">1--&gt;</span></tt>
+with the right column being <tt class="docutils literal"><span class="pre">&lt;!--Profile</span> <span class="pre">Skills</span> <span class="pre">Section</span> <span class="pre">2--&gt;</span></tt>. An individual skill item is shown below:</p>
+<div class="line-block">
+<div class="line">The skill item title is nested inside a <tt class="docutils literal"><span class="pre">&lt;h5&gt;</span></tt>, and the description is nested inside the <tt class="docutils literal"><span class="pre">&lt;p&gt;</span></tt>.</div>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">data-fill-level</span></tt> attribute is used to set the amount to fill the progress bars. <em>Values range 1-10</em></p>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;skill-item&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h5&gt;</span>C# / ASP.NET<span class="nt">&lt;/h5&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;progress-bubbles color-bg-profile&quot;</span> <span class="na">data-fill-level=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;&lt;/ul&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Tamquam apeirian argumentum vim id. Cu reque quaeque vis, id quo sumo vero.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="resume">
+<h6>Resume<a class="headerlink" href="#resume" title="Permalink to this headline">¶</a></h6>
+<p>The resume is broken down into two sections, the <a class="reference internal" href="index.html#timeline"><em>Timeline</em></a> and <a class="reference internal" href="index.html#experience"><em>Experience</em></a>.</p>
+<div class="section" id="timeline">
+<span id="index-5"></span><span id="id1"></span><h7>Timeline<a class="headerlink" href="#timeline" title="Permalink to this headline">¶</a></h7>
+<p>The timeline is used for both the <em>Education</em> and <em>Work</em> sections of the Resume. The <em>Work</em> section uses an extra
+<tt class="docutils literal"><span class="pre">&lt;span&gt;</span></tt> to display the job title.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">&lt;span</span> <span class="pre">class=&quot;job-title&quot;&gt;</span></tt> show a sub heading other the item&#8217;s header. ex. <em>Work List Item</em>.</p>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;timeline-item&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;date&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dot&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;span&gt;</span>Feb 2001 - Nov 2003<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">&quot;timeline-title&quot;</span><span class="nt">&gt;</span>Great Company<span class="nt">&lt;/h5&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;job-title&quot;</span><span class="nt">&gt;</span>iOS Developer<span class="nt">&lt;/span&gt;</span>
+
+    <span class="nt">&lt;p&gt;</span>Donec blandit aliquam enim ac adipiscing. Quisque tempus lacus quis volutpat mattis. Quisque vel
+        gravida massa, et pharetra lacus. Nulla facilisi.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="experience">
+<span id="index-6"></span><span id="id2"></span><h7>Experience<a class="headerlink" href="#experience" title="Permalink to this headline">¶</a></h7>
+<div class="line-block">
+<div class="line">The experience section is an area to show a quick overview of progress bars and tag area.</div>
+<div class="line">A single experience item</div>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!--Experience Item--&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;experience-item&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>PHP<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-experience&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">data-value=</span><span class="s">&quot;70&quot;</span>
+             <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>70% Complete (success)<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- End Experience Item --&gt;</span>
+</pre></div>
+</div>
+<p>To change the value of the progress bar update the <tt class="docutils literal"><span class="pre">data-value</span></tt> attribute on the <tt class="docutils literal"><span class="pre">progress-bar-experience</span></tt> <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt>.</p>
+<hr class="docutils" />
+<p>The <em>Other Experience</em> section is made up of a <tt class="docutils literal"><span class="pre">&lt;ul&gt;</span></tt> element with a class of <tt class="docutils literal"><span class="pre">tag-area</span></tt>. Each <tt class="docutils literal"><span class="pre">&lt;li&gt;</span></tt> element is a new
+item in the section.</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!--Other Experience--&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-offset-1 col-md-10&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;other-experience&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5&gt;</span>Other Experience<span class="nt">&lt;/h5&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;tag-area&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Django<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Visual Studio<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Adobe Illustrator<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Adobe Photoshop<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Ruby<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Rails<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Linux<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Windows<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>Mac OSX<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span>MongoDB<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- End Other Experience --&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="portfolio">
+<span id="index-7"></span><span id="id3"></span><h6>Portfolio<a class="headerlink" href="#portfolio" title="Permalink to this headline">¶</a></h6>
+<p>The Portfolio section uses to <tt class="docutils literal"><span class="pre">&lt;ul&gt;</span></tt> elements to make the menu as well as the images to display. The portfolio menu has a nested <tt class="docutils literal"><span class="pre">&lt;a&gt;</span></tt> element, which
+is used to determine which images are displayed.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Only one <tt class="docutils literal"><span class="pre">&lt;li&gt;</span></tt> must should have a class of <tt class="docutils literal"><span class="pre">active</span></tt> to show the initial selected item. Each <tt class="docutils literal"><span class="pre">&lt;a&gt;</span></tt> must contain a <tt class="docutils literal"><span class="pre">data-filter</span></tt> attribute,
+which is used to determine the class of items to display.</p>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!--Portfolio Menu --&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;portfolio-menu&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-filter=</span><span class="s">&quot;*&quot;</span><span class="nt">&gt;</span>Everything<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-filter=</span><span class="s">&quot;.photos&quot;</span><span class="nt">&gt;</span>Photos<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-filter=</span><span class="s">&quot;.videos&quot;</span><span class="nt">&gt;</span>Videos<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-filter=</span><span class="s">&quot;.sites&quot;</span><span class="nt">&gt;</span>Sites<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+<p>The corresponding image for the <em>Photos</em> menu item:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;portfolio-item photos&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;images/blankframe.png&quot;</span> <span class="na">class=</span><span class="s">&quot;popbox&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;images/blankframe.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;Portfolio Image&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Portfolio Container:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;portfolio-container&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;portfolio-item photos&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;images/blankframe.png&quot;</span> <span class="na">class=</span><span class="s">&quot;popbox&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;images/blankframe.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;Portfolio Image&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;portfolio-item sites&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;images/testImg1.png&quot;</span> <span class="na">class=</span><span class="s">&quot;popbox&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;images/testImg1.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;Portfolio Image&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;portfolio-item sites videos&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;images/largeImg.png&quot;</span> <span class="na">class=</span><span class="s">&quot;popbox&quot;</span><span class="nt">&gt;&lt;img</span>
+            <span class="na">src=</span><span class="s">&quot;images/largeImg.png&quot;</span>
+            <span class="na">alt=</span><span class="s">&quot;Portfolio Image&quot;</span><span class="nt">/&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contact">
+<span id="index-8"></span><span id="id4"></span><h6>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h6>
+<p>The Contact section contains a map using Google Map&#8217;s API, a section for contact information and a form to email you feedback.</p>
+<div class="section" id="google-maps">
+<span id="index-9"></span><h7>Google Maps<a class="headerlink" href="#google-maps" title="Permalink to this headline">¶</a></h7>
+<p>The plugin inserts the map by finding <tt class="docutils literal"><span class="pre">&lt;div</span> <span class="pre">id=&quot;#gMap&quot;&gt;&lt;/div&gt;</span></tt>, and pulling the address from contact address section.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="index.html#jquery-google-maps"><em>jQuery Google Maps V3 API Plugin</em></a></p>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="c">&lt;!-- Contact Map Address --&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+    <span class="nt">&lt;span&gt;</span>Joe Smith<span class="nt">&lt;/span&gt;</span>
+    123 Main St. <span class="nt">&lt;br/&gt;</span>
+    New York, NY 10013
+<span class="nt">&lt;/p&gt;</span>
+<span class="c">&lt;!-- End Contact Map Address --&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contact-information">
+<h7>Contact Information<a class="headerlink" href="#contact-information" title="Permalink to this headline">¶</a></h7>
+<p>To change the icons used for each section, change the Font Awesome class on the corresponding <tt class="docutils literal"><span class="pre">&lt;i&gt;</span></tt> element.</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-5 col-md-offset-1 col-md-4 contact-info&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>Contact Information<span class="nt">&lt;/h3&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;contact-address&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-user&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+
+        <span class="c">&lt;!-- Contact Map Address --&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+            <span class="nt">&lt;span&gt;</span>Joe Smith<span class="nt">&lt;/span&gt;</span>
+            123 Main St. <span class="nt">&lt;br/&gt;</span>
+            New York, NY 10013
+        <span class="nt">&lt;/p&gt;</span>
+        <span class="c">&lt;!-- End Contact Map Address --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;contact-phone&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-phone&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+
+        <span class="nt">&lt;p&gt;</span>
+            +1 555-555-5555
+        <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;contact-email&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-envelope&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+
+        <span class="nt">&lt;p&gt;</span>
+            joesmith@company.com
+            http://www.joesmith.com
+        <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contact-form">
+<h7>Contact form<a class="headerlink" href="#contact-form" title="Permalink to this headline">¶</a></h7>
+<p>The contact form uses a simple php script to send mail. In order for the contact form to get mail to you,
+please update the contact form <tt class="docutils literal"><span class="pre">config.php</span></tt> file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Error Messages are set within the <tt class="docutils literal"><span class="pre">postaction.php</span></tt> file.</p>
+</div>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="c1">//Email Config</span>
+<span class="nb">define</span><span class="p">(</span><span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="s1">&#39;youremail@domain.com&#39;</span><span class="p">);</span>
+<span class="nb">define</span><span class="p">(</span><span class="s1">&#39;from&#39;</span><span class="p">,</span> <span class="s1">&#39;fromemail@domain.com&#39;</span><span class="p">);</span>
+<span class="nb">define</span><span class="p">(</span><span class="s1">&#39;subject&#39;</span><span class="p">,</span> <span class="s1">&#39;Someone has contacted you.&#39;</span><span class="p">);</span>
+
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<span id="document-cssless"></span><div class="section" id="css">
+<h5>CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="css-files">
+<h6>CSS Files<a class="headerlink" href="#css-files" title="Permalink to this headline">¶</a></h6>
+<p>List of CSS Files:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">File Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>style.css</td>
+<td>Custom css stylesheet used to set the default theme</td>
+</tr>
+<tr class="row-odd"><td>theme-light-blue.css</td>
+<td>Solid blue theme based of the <em>default light theme</em></td>
+</tr>
+<tr class="row-even"><td>theme-light-green.css</td>
+<td>Solid green theme based of the <em>default light theme</em></td>
+</tr>
+<tr class="row-odd"><td>theme-light-red.css</td>
+<td>Solid red theme based of the <em>default light theme</em></td>
+</tr>
+<tr class="row-even"><td>theme-light-purple.css</td>
+<td>Solid purple theme based of the <em>default light theme</em></td>
+</tr>
+<tr class="row-odd"><td>theme-dark.css</td>
+<td>Custom Dark Theme</td>
+</tr>
+<tr class="row-even"><td>theme-dark-blue.css</td>
+<td>Solid blue theme based off the <em>dark theme</em></td>
+</tr>
+<tr class="row-odd"><td>theme-dark-green.css</td>
+<td>Solid green theme based off the <em>dark theme</em></td>
+</tr>
+<tr class="row-even"><td>theme-dark-red.css</td>
+<td>Solid red theme based off the <em>dark theme</em></td>
+</tr>
+<tr class="row-odd"><td>theme-dark-purple.css</td>
+<td>Solid purple theme based off the <em>dark theme</em></td>
+</tr>
+<tr class="row-even"><td>bootstrap.min.css</td>
+<td>CSS Stylesheet for the Bootstrap 3 framework</td>
+</tr>
+<tr class="row-odd"><td>font-awesome.min.css</td>
+<td>CSS Stylesheet for the Font Awesome icon set</td>
+</tr>
+<tr class="row-even"><td>jquery.fancybox.css</td>
+<td>CSS Stylesheet for the jQuery fancybox plugin</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="modifying-a-theme-using-css">
+<h7>Modifying a theme using CSS<a class="headerlink" href="#modifying-a-theme-using-css" title="Permalink to this headline">¶</a></h7>
+<p>The best way to modified the compiled CSS is using the LESS files as a reference. If you want to change the color used
+for the <tt class="docutils literal"><span class="pre">&#64;profileColor</span></tt>, find the <tt class="docutils literal"><span class="pre">#profile</span></tt> and <tt class="docutils literal"><span class="pre">.profile-bg</span></tt> section of the CSS file and change the color HEX value accordingly:</p>
+<div class="highlight-python"><pre>...
+
+#profile h3 {
+  color: #4ca5d0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+...
+
+.page-head .profile-bg {
+  background: #4ca5d0 !important;
+}</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The recommended method for modifying the theme is using <a class="reference internal" href="index.html#less-files"><em>LESS Files</em></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="less-files">
+<span id="index-0"></span><span id="id1"></span><h6>LESS Files<a class="headerlink" href="#less-files" title="Permalink to this headline">¶</a></h6>
+<p>This theme was created using LESS Styles to compile the standard CSS Stylesheets.
+When modifying the theme it is recommended to modify the LESS files to generate the CSS, but is not required.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://www.lesscss.org">LESS Homepage</a> for more information on using LESS.</p>
+</div>
+<div class="section" id="modifying-the-theme-using-less">
+<h7>Modifying the Theme using LESS<a class="headerlink" href="#modifying-the-theme-using-less" title="Permalink to this headline">¶</a></h7>
+<p>The variables used in the less files will change mostly every aspects of the theme.</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="k">@bg-color</span><span class="o">:</span> <span class="nf">#E2E2E2</span><span class="p">;</span>
+<span class="k">@page-bg-color</span><span class="o">:</span> <span class="nf">#F6F6F6</span><span class="p">;</span>
+<span class="k">@primary-text-color</span><span class="o">:</span> <span class="nf">#878787</span><span class="p">;</span>
+<span class="k">@header-text-color</span><span class="o">:</span> <span class="nf">#414141</span><span class="p">;</span>
+<span class="k">@tag-line-color</span><span class="o">:</span> <span class="nf">#878787</span><span class="p">;</span>
+<span class="k">@border-color</span><span class="o">:</span> <span class="nf">#E2E2E2</span><span class="p">;</span>
+
+<span class="k">@link-color</span><span class="o">:</span> <span class="nf">#4CA5D0</span><span class="p">;</span>
+<span class="k">@link-hover-color</span><span class="o">:</span> <span class="nf">#345d82</span><span class="p">;</span>
+
+<span class="k">@profileColor</span><span class="o">:</span> <span class="nf">#4ca5d0</span><span class="p">;</span>
+<span class="k">@resumeColor</span><span class="o">:</span> <span class="nf">#4ae2b1</span><span class="p">;</span>
+<span class="k">@portfolioColor</span><span class="o">:</span> <span class="nf">#9018C5</span><span class="p">;</span>
+<span class="k">@portfolio-link-color</span><span class="o">:</span> <span class="nf">#9018C5</span><span class="p">;</span>
+<span class="k">@contactColor</span><span class="o">:</span> <span class="nf">#E32B1D</span><span class="p">;</span>
+<span class="k">@footer-bg-color</span><span class="o">:</span> <span class="nf">#4ca5d0</span><span class="p">;</span>
+<span class="k">@footer-social-link-color</span><span class="o">:</span> <span class="nf">#F6F6F6</span><span class="p">;</span>
+<span class="k">@footer-social-link-hover-color</span><span class="o">:</span> <span class="nf">#c0c0c0</span><span class="p">;</span>
+
+<span class="k">@text-gray</span><span class="o">:</span> <span class="nf">#7C7C7C</span><span class="p">;</span>
+
+<span class="k">@border-radius</span><span class="o">:</span> <span class="nt">3px</span><span class="p">;</span>
+
+<span class="k">@bubble-progress-bg-color</span><span class="o">:</span> <span class="nf">#E2E2E2</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<span id="document-javascript"></span><div class="section" id="javascript">
+<h5>Javascript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="files">
+<h6>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h6>
+<p>List of Javascript Files:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">File Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>custom.js</td>
+<td>Custom Scripts and Plugin initialization</td>
+</tr>
+<tr class="row-odd"><td>bootstrap.min.js</td>
+<td>Bootstrap 3</td>
+</tr>
+<tr class="row-even"><td>jquery-1.10.2.min.js</td>
+<td>jQuery ver 1.10.2</td>
+</tr>
+<tr class="row-odd"><td>jquery.fancybox.pack.js</td>
+<td>Fancybox jQuery Plugin <a class="reference internal" href="index.html#restrictive-plugins"><em>Restrictive jQuery Plugins</em></a>, <a class="reference internal" href="index.html#plugin-license"><em>jQuery Plugins</em></a></td>
+</tr>
+<tr class="row-even"><td>jquery.gmap.min.js</td>
+<td>Google Map <a class="reference internal" href="index.html#plugin-license"><em>jQuery Plugins</em></a></td>
+</tr>
+<tr class="row-odd"><td>jquery.isotope.min.js</td>
+<td>jQuery Plugin used in portfolio section <a class="reference internal" href="index.html#restrictive-plugins"><em>Restrictive jQuery Plugins</em></a>, <a class="reference internal" href="index.html#plugin-license"><em>jQuery Plugins</em></a></td>
+</tr>
+<tr class="row-even"><td>jquery.smoothScroll.js</td>
+<td>jQuery Plugin used for smooth scrolling <a class="reference internal" href="index.html#plugin-license"><em>jQuery Plugins</em></a></td>
+</tr>
+<tr class="row-odd"><td>jquery.waypoints.min.js</td>
+<td>jQuery Plugin to handle animation when element comes in view <a class="reference internal" href="index.html#plugin-license"><em>jQuery Plugins</em></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<span id="document-sourcesandcredits"></span><div class="section" id="sources-and-credits">
+<span id="license"></span><span id="index-0"></span><h5>Sources and Credits<a class="headerlink" href="#sources-and-credits" title="Permalink to this headline">¶</a></h5>
+<p>This theme uses third party plugins and icons. Information on these items are listed below.</p>
+<div class="section" id="font-awesome">
+<span id="index-1"></span><h6>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">¶</a></h6>
+<div class="line-block">
+<div class="line">Font Awesome by Dave Gandy - <a class="reference external" href="http://fontawesome.io">http://fontawesome.io</a></div>
+<div class="line">For more information please see the <a class="reference external" href="http://www.fontawesome.io/license">Font Awesome License</a></div>
+</div>
+</div>
+<div class="section" id="bootstrap-3">
+<span id="index-2"></span><h6>Bootstrap 3<a class="headerlink" href="#bootstrap-3" title="Permalink to this headline">¶</a></h6>
+<p>Bootstrap code is licensed under <a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+</div>
+<div class="section" id="jquery-plugins">
+<span id="plugin-license"></span><span id="index-3"></span><h6>jQuery Plugins<a class="headerlink" href="#jquery-plugins" title="Permalink to this headline">¶</a></h6>
+<p>License for the jQuery plugins used in Flatrok theme.</p>
+<div class="section" id="jquery-smooth-scroll">
+<span id="index-4"></span><h7>jQuery Smooth Scroll<a class="headerlink" href="#jquery-smooth-scroll" title="Permalink to this headline">¶</a></h7>
+<p>Licensed under the MIT License. Created by Karl Swedberg. <a class="reference external" href="https://github.com/kswedberg/jquery-smooth-scroll">jQuery Smooth Scroll on GitHub</a></p>
+</div>
+<div class="section" id="jquery-google-maps-v3-api-plugin">
+<span id="jquery-google-maps"></span><h7>jQuery Google Maps V3 API Plugin<a class="headerlink" href="#jquery-google-maps-v3-api-plugin" title="Permalink to this headline">¶</a></h7>
+<p>Licensed under the MIT License. Created by Sebastian Poreba. <a class="reference external" href="http://www.smashinglabs.pl/gmap">jQuery plugin for Google Maps V3 API</a></p>
+</div>
+<div class="section" id="jquery-waypoints-plugin">
+<h7>jQuery Waypoints Plugin<a class="headerlink" href="#jquery-waypoints-plugin" title="Permalink to this headline">¶</a></h7>
+<p>Licensed under the MIT License. Created by Caleb Troughton. <a class="reference external" href="http://imakewebthings.com/jquery-waypoints/">jQuery Waypoints</a></p>
+</div>
+</div>
+<div class="section" id="restrictive-jquery-plugins">
+<span id="restrictive-plugins"></span><h6>Restrictive jQuery Plugins<a class="headerlink" href="#restrictive-jquery-plugins" title="Permalink to this headline">¶</a></h6>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Flatrok theme uses a couple of restrictive plugins. Please see the following licenses before use.</p>
+</div>
+<div class="section" id="fancybox">
+<span id="id1"></span><h7>fancyBox<a class="headerlink" href="#fancybox" title="Permalink to this headline">¶</a></h7>
+<div class="line-block">
+<div class="line">fancyBox licensed under <a class="reference external" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0</a> license.</div>
+<div class="line">You are free to use fancyBox for your personal or non-profit website projects.</div>
+<div class="line">You can get the author&#8217;s permission to use fancyBox for commercial websites by <a class="reference external" href="http://fancyapps.com/store/">paying a fee</a>.</div>
+</div>
+</div>
+<div class="section" id="isotope">
+<h7>Isotope<a class="headerlink" href="#isotope" title="Permalink to this headline">¶</a></h7>
+<div class="line-block">
+<div class="line">For non-commercial, personal, or open source projects and applications, you may use Isotope under the terms of the MIT License. You may use Isotope for free.</div>
+<div class="line">Please see <a class="reference external" href="http://isotope.metafizzy.co/docs/license.html">Isotope License</a> for more information.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html#document-index">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="index.html#document-index">Flatrok Theme Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-htmlstruct">1. HTML Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-cssless">2. CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-javascript">3. Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-sourcesandcredits">4. Sources and Credits</a></li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html#document-index">Flatrok 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Polonel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

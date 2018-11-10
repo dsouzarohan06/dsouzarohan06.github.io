@@ -1,0 +1,35 @@
+@import url("default.css");
+
+body {
+	background-color: #3F87AD;
+}
+
+.clear {
+	clear:both;
+}
+
+div.rightside {
+	width: 350px;
+	padding: 15px 3px 0 0;
+	float: right;
+}
+
+div.leftside {
+	float: left;
+}
+
+div.document {
+	background-color: #4CA5D0;
+}
+
+div.sphinxsidebar a {
+	color: #FFFFFF;
+}
+
+div.sphinxsidebar input {
+	border: 1px solid #3F87AD;
+}
+
+div.related {
+	background-color: #3F87AD;
+}

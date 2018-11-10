@@ -1,0 +1,204 @@
+/*
+
+Flatrok LESS Layout and Dark Theme
+Author: Chris Brame
+Version: 1.0
+Date: Nov 18th, 2013
+
+*/
+body {
+  color: #878787;
+  background: #141414;
+}
+a,
+a:visited {
+  color: #9018c5;
+}
+a:active,
+a:visited:active,
+a:hover,
+a:visited:hover {
+  color: #ffffff;
+}
+.social-links.social-footer ul li a {
+  color: #f6f6f6;
+}
+.social-links.social-footer ul li a:active,
+.social-links.social-footer ul li a:hover {
+  color: #c0c0c0;
+}
+@media (max-width: 768px) {
+  .social-links {
+    background: #282828;
+  }
+}
+.social-links ul li a {
+  color: #878787;
+}
+.social-links ul li a:hover,
+.social-links ul li a:active {
+  color: #FFFFFF;
+}
+.page-body {
+  background: #282828;
+}
+.page-head .tagline {
+  color: #ffffff;
+}
+.page-head .tagline span {
+  color: #9018c5;
+}
+.page-head .tagline span:before {
+  color: #9018c5;
+}
+.page-head .tagline span:after {
+  color: #9018c5;
+}
+.page-head .jobtag span {
+  background: #9018c5;
+  color: #FFFFFF;
+}
+.page-head .profile-bg {
+  background: #9018c5 !important;
+}
+.page-head .resume-bg {
+  background: #9018c5 !important;
+}
+.page-head .portfolio-bg {
+  background: #9018c5 !important;
+}
+.page-head .contact-bg {
+  background: #9018c5 !important;
+}
+.page-head .nav-bar ul li.nav-item {
+  background: #9018c5;
+}
+.page-head .nav-bar ul li.nav-item a {
+  color: white;
+}
+.page-head .nav-bar ul li.nav-item a:hover {
+  text-decoration: none;
+}
+#profile h2,
+#profile h3 {
+  color: #9018c5;
+}
+#profile .profile-information {
+  color: #878787;
+}
+#profile .profile-information .item span {
+  font-weight: bold;
+  color: #7c7c7c;
+}
+#profile .profile-skills .skill-item {
+  color: #7c7c7c;
+}
+#profile .profile-skills .skill-item h5 {
+  color: #ffffff;
+}
+ul.progress-bubbles li {
+  background: #4c4c4c;
+}
+ul.progress-bubbles li.filled-bg {
+  background: #9018c5;
+}
+#resume h2,
+#resume h3,
+#resume h5 {
+  color: #9018c5;
+}
+#resume .resume-edu {
+  border-left: 3px solid #545454;
+}
+#resume .timeline-item .timeline-title {
+  color: #ffffff;
+}
+#resume .timeline-item .date {
+  color: #fff;
+}
+#resume .timeline-item .date span {
+  background: #9018c5;
+}
+#resume .timeline-item .date .dot {
+  background: #9018c5;
+}
+#resume .resume-work {
+  border-left: 3px solid #545454;
+}
+#resume .experience-item p {
+  color: #ffffff;
+}
+#resume .other-experience ul.tag-area li {
+  background: #9018c5;
+}
+#portfolio h1,
+#portfolio h2,
+#portfolio h3,
+#portfolio h4,
+#portfolio h5,
+#portfolio h6 {
+  color: #9018c5;
+}
+#portfolio #portfolio-container .portfolio-hover-box {
+  background: #9018c5;
+}
+ul.tag-area li {
+  background: #9018c5;
+  color: #ffffff;
+}
+.progress-bar-experience {
+  background-color: #9018c5;
+}
+.progress {
+  background-color: #4c4c4c;
+}
+.portfolio-menu li {
+  color: #9018c5;
+}
+.portfolio-menu li.hover,
+.portfolio-menu li.active {
+  background-color: #9018c5;
+}
+.portfolio-menu li a {
+  color: #ffffff;
+}
+#contact h1,
+#contact h2,
+#contact h3,
+#contact h4,
+#contact h5,
+#contact h6 {
+  color: #9018c5;
+}
+#contact .contact-info {
+  border-right: 5px solid #545454;
+}
+#contact i {
+  color: #9018c5;
+}
+#contact p span {
+  color: #ffffff;
+}
+#contact textarea,
+#contact input {
+  background: #3e3e3e;
+  border-color: #545454;
+}
+#contact .contact-btn {
+  background-color: #9018c5;
+}
+.footer {
+  background-color: #474747;
+  color: white;
+}
+@media all {
+  ::selection {
+    background: #9018C5;
+  }
+}
+@media all {
+  ::selection {
+    color: #ffffff;
+    background: #9018c5;
+  }
+}

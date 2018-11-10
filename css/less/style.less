@@ -1,0 +1,1000 @@
+/*
+
+Flatrok LESS Layout and Default Theme
+Author: Chris Brame
+Version: 1.0
+Date: Nov 18th, 2013
+
+*/
+
+
+//Global Settings1
+@bg-color: #E2E2E2;
+@page-bg-color: #F6F6F6;
+@primary-text-color: #878787;
+@header-text-color: #414141;
+@tag-line-color: #878787;
+@border-color: #E2E2E2;
+
+@link-color: #4CA5D0;
+@link-hover-color: #345d82;
+
+@profileColor: #4ca5d0;
+@resumeColor: #4ae2b1;
+@portfolioColor: #9018C5;
+@portfolio-link-color: #9018C5;
+@contactColor: #E32B1D;
+@footer-bg-color: #4ca5d0;
+@footer-social-link-color: #F6F6F6;
+@footer-social-link-hover-color: #c0c0c0;
+
+@text-gray: #7C7C7C;
+
+@border-radius: 3px;
+
+@bubble-progress-bg-color: #E2E2E2;
+
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  margin-top: 75px;
+  color: @primary-text-color;
+  background: @bg-color;
+  background: url('../images/honeycomb.png') repeat;
+  @media (max-width: 768px), (max-width: 480px) {
+    margin-top: 0px;
+  }
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+//Images responsive
+img {
+  vertical-align: middle;
+  border: 0;
+  page-break-inside: avoid;
+  max-width: 100% !important;
+}
+
+a, a:visited {
+  color: @link-color;
+  //font-weight: 600;
+  &:active,
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: none;
+  }
+}
+
+.container {
+  width: 960px;
+  @media (max-width: 768px), (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+//Misc
+.borderRadius(@radius) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+.placeholder {
+  color: #aaaaaa;
+}
+
+#wrapper .container .page-head .nav-wrapper .nav-bar.lock-top {
+  //@media (max-width: 320px) {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  margin-top: 0 !important;
+  margin-left: 0px;
+  z-index: 100;
+  //}
+}
+
+li.small-scale {
+  cursor: pointer;
+  padding: 17px 95px !important;
+  @media (max-width: 768px) {
+    width: 188px !important;
+    padding: 17px 50px !important;
+  }
+  @media (max-width: 640px) {
+    width: 160px !important;
+    padding: 20px 65px !important;
+  }
+  @media (max-width: 568px) {
+    width: 142px !important;
+    padding: 20px 65px !important;
+  }
+  @media (max-width: 540px) {
+    width: 135px !important;
+    padding: 20px 65px !important;
+  }
+  @media (max-width: 480px)  {
+    width: 120px !important;
+    padding: 20px 50px !important;
+  }
+  @media (max-width: 360px) {
+    width: 90px !important;
+    height: 25px !important;
+    padding: 17px 40px !important;
+  }
+  @media (max-width: 320px) {
+    height: 25px !important;
+    width: 80px !important;
+    padding: 17px 32px !important;
+  }
+  a {
+    @media (max-width: 320px), (max-width: 360px) {
+      display: none !important;
+    }
+  }
+
+  a.nav-link-small {
+    @media (max-width: 320px), (max-width: 360px) {
+      display: block !important;
+    }
+    span {
+      @media (max-width: 320px), (max-width: 360px) {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.small-scale .oval {
+  height: 55px !important;
+  width: 55px !important;
+  .borderRadius(22.5px);
+
+  i {
+    font-size: 20px !important;
+  }
+
+  span {
+    font-size: 10px !important;
+    top: 15px;
+    left: 75px;
+  }
+}
+
+.nav-link-small {
+
+  span {
+    @media (max-width: 480px),(max-width: 640px)  {
+      font-size: 14px !important;
+      font-weight: 600 !important;
+    }
+    @media (max-width: 320px), (max-width: 360px) {
+      font-size: 11px !important;
+    }
+
+  }
+}
+
+.row-content {
+  padding: 15px 80px;
+}
+
+.social-links.social-footer {
+  display: inline-block;
+  float: right;
+  background: inherit !important;
+  padding: 0;
+  padding-right: 10px;
+
+  @media (max-width: 480px),(max-width: 640px)  {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  ul {
+    margin-top: -3px;
+    @media (max-width: 480px),(max-width: 640px)  {
+      margin-top: 15px;
+      width: 100%;
+    }
+    li {
+
+      a {
+        color: @footer-social-link-color;
+
+        &:active,
+        &:hover {
+          color: @footer-social-link-hover-color;
+        }
+      }
+    }
+  }
+}
+
+.social-links {
+  margin-bottom: 3px;
+  font-size: 20px;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-right: 20px;
+    background: @page-bg-color;
+  }
+  
+  ul {
+    display: inline-block;
+    float: right;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 7px;
+
+      a {
+        display: block;
+        color: @primary-text-color;
+
+        &:hover,
+        &:active {
+          color: #ffffff;
+        }
+      }
+
+    }
+  }
+}
+
+.page-body {
+  height: 100%;
+  background: @page-bg-color;
+  position: relative;
+}
+
+.page-head {
+  min-height: 450px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+
+  @media (max-width: 320px), (max-width: 360px) {
+    margin-bottom: 0;
+  }
+
+  .profile-pic {
+    float: left;
+    width: 181px;
+    height: 181px;
+    margin-left: 100px;
+    margin-right: 75px;
+    @media (max-width: 768px) {
+      margin-left: 25px;
+    }
+
+    @media (max-width: 640px) {
+      margin-left: 210px;
+      margin-bottom: 25px;
+    }
+    @media (max-width: 568px) {
+      margin-left: 175px;
+      margin-bottom: 25px;
+    }
+    @media (max-width: 480px) {
+      margin-left: 120px;
+      margin-bottom: 25px;
+    }
+    @media (max-width: 320px), (max-width: 360px) {
+      margin-left: 45px;
+    }
+  }
+
+  .tagline {
+    float: left;
+    font-size: 64px;
+    color: @header-text-color;
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
+    @media (max-width: 640px) {
+      margin-left: 200px;
+    }
+    @media (max-width: 568px) {
+      margin-left: 160px;
+    }
+    @media (max-width: 480px) {
+      margin-left: 100px;
+    }
+    @media (max-width: 360px) {
+      margin-left: 10px;
+    }
+    span {
+      position: relative;
+      display: block;
+      color: @tag-line-color;
+      font-size: 30px;
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+      @media (max-width: 640px) {
+        margin-left: -50px;
+      }
+      @media (max-width: 360px) {
+        margin-left: 40px;
+      }
+      @media (max-width: 320px) {
+        font-size: 14px;
+        margin-bottom: 45px;
+      }
+      font-style: italic;
+      margin: 40px 15px 0px 45px;
+
+      &:before {
+        display: block;
+        margin-left: -15px;
+        font-family: "FontAwesome";
+        position: absolute;
+        //left: -20px;
+        //top: -110px;
+        left: -25px;
+        top: -25px;
+        font-size: 32px;
+        color: @tag-line-color;
+        content: '\f10d';
+      }
+
+      &:after {
+        font-family: "FontAwesome";
+        display: block;
+        position: absolute;
+        right: -25px;
+        top: 35px;
+        font-size: 32px;
+        color: @tag-line-color;
+        content: '\f10e';
+        @media (max-width: 320px), (max-width: 360px) {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .jobtag {
+    margin-top: 50px;
+    margin-left: -15px;
+
+    @media (max-width: 320px), (max-width: 360px) {
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      margin-left: 0;
+    }
+
+    span {
+      font-weight: normal;
+      background: @profileColor;
+      padding: 5px 15px;
+      color: #FFFFFF;
+
+      @media (max-width: 320px), (max-width: 360px) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .profile-bg {
+    background: @profileColor !important;
+  }
+
+  .resume-bg {
+    background: @resumeColor !important;
+  }
+
+  .portfolio-bg {
+    background: @portfolioColor !important;
+  }
+
+  .contact-bg {
+    background: @contactColor !important;
+  }
+
+  .nav-bar {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+
+    ul {
+      float: left;
+      list-style: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+
+      li.nav-item {
+        display: inline-block;
+        float: left;
+        width: 240px;
+        height: 185px;
+        background: @profileColor;
+        padding: 35px 65px;
+
+        @media (max-width: 768px) {
+          width: 188px;
+          padding: 40px
+        }
+        @media (max-width: 640px) {
+          width: 160px;
+          padding: 25px 50px;
+          height: 100px;
+        }
+        @media (max-width: 568px) {
+          width: 142px;
+          padding: 25px 45px;
+          height: 100px;
+        }
+        @media (max-width: 540px) {
+          width: 135px;
+          padding: 25px 45px;
+          height: 100px;
+        }
+        @media (max-width: 480px) {
+          width: 120px;
+          padding: 25px 40px;
+          height: 100px;
+        }
+
+        a {
+          display: block;
+          color: white;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          div.oval {
+            width: 110px;
+            height: 110px;
+            border: 3px solid #fff;
+            .borderRadius(55px);
+            padding: 17px 18px;
+            position: relative;
+            overflow: hidden;
+            @media (max-width: 480px),(max-width: 640px)  {
+              width: 55px;
+              height: 55px;
+              .borderRadius(27.5);
+            }
+          }
+
+          i {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 72px;
+
+            @media (max-width: 480px),(max-width: 640px)  {
+              font-size: 22px;
+            }
+
+            &.fa-envelope {
+              font-size: 64px;
+              @media (max-width: 480px),(max-width: 640px)  {
+                font-size: 22px;
+              }
+            }
+          }
+
+          span {
+            display: block;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 20px;
+            @media (max-width: 480px),(max-width: 640px)  {
+              font-size: 11px;
+              font-weight: 600px;
+            }
+          }
+        }
+
+      }
+
+      //Effect for navbar
+      li.small-scale {
+        height: 45px;
+      }
+
+    }
+  }
+}
+
+#profile {
+  margin-top: -65px;
+  padding-top: 65px;
+  margin-bottom: 50px;
+  .info {
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+
+  h2,
+  h3 {
+    color: @profileColor;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .profile-information {
+    padding-top: 5px;
+    color: @primary-text-color;
+    font-size: 14px;
+
+    .item {
+      margin-bottom: 10px;
+
+      span {
+        font-weight: bold;
+        color: @text-gray;
+      }
+    }
+  }
+
+  .profile-skills {
+
+    h3 {
+      margin-bottom: 15px;
+    }
+
+    .skill-item {
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 15px;
+      color: @text-gray;
+
+      h5 {
+        color: @header-text-color;
+        @media (max-width: 320px), (max-width: 360px) {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+ul.progress-bubbles {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 8px;
+
+  li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    .borderRadius(8px);
+    background: @bubble-progress-bg-color;
+    margin-right: 5px;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+
+    @media (max-width: 480px),(max-width: 640px)  {
+      width: 12px;
+      height: 12px;
+    }
+    @media (max-width: 320px), (max-width: 360px) {
+      width: 7px;
+      height: 7px;
+    }
+
+    &.filled-bg {
+      background: @profileColor;
+    }
+
+  }
+}
+
+//RESUME
+#resume {
+  margin-top: -155px;
+  padding-top: 155px;
+  margin-bottom: 50px;
+
+  h2,
+  h3,
+  h5 {
+    color: @resumeColor;
+    font-weight: normal;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  .resume-edu {
+    margin-top: 40px;
+    margin-left: 10px;
+    padding-left: 30px;
+    border-left: 3px solid @border-color;
+  }
+
+  .timeline-item {
+    margin-top: 25px;
+
+    .timeline-title {
+      font-size: 18px;
+      color: @header-text-color;
+      margin: 25px 0 10px 0;
+    }
+
+    span.job-title {
+      display: block;
+      margin-top: -5px;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+
+    .date {
+      position: relative;
+      color: #fff;
+      font-weight: bold;
+
+      span {
+        background: @resumeColor;
+        .borderRadius(@border-radius);
+        padding: 5px 8px;
+        font-weight: 600;
+      }
+
+      .dot {
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: -37px;
+        top: 5px;
+        .borderRadius(6px);
+        background: @resumeColor;
+      }
+    }
+  }
+
+  .resume-work {
+    margin-top: 87px;
+    @media (max-width: 480px),(max-width: 640px)  {
+      margin-top: 43px;
+    }
+    margin-left: 10px;
+    border-left: 3px solid @border-color;
+    padding-left: 30px;
+  }
+
+  .experience-item {
+    margin-top: 20px;
+
+    p {
+      font-weight: normal;
+      color: @header-text-color;
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .other-experience ul.tag-area li {
+    background: @resumeColor;
+  }
+
+}
+
+#portfolio {
+  margin-top: -65px;
+  padding-top: 65px;
+  margin-bottom: 20px;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @portfolioColor;
+    font-weight: normal;
+  }
+
+  #portfolio-container {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0px 5px 10px 0;
+
+      a {
+        display: block;
+      }
+    }
+
+    .portfolio-item-hover {
+      //border-radius: @border-radius;
+    }
+
+    .portfolio-hover-box {
+      background: @portfolioColor;
+    }
+  }
+
+}
+
+//Portfolio - Isotope
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+ul.tag-area {
+  margin: 10px 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+  font-weight: normal;
+
+  li {
+    .borderRadius(@border-radius);
+    display: inline-block;
+    padding: 5px 10px;
+    background: @profileColor;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 3px 15px 0;
+    opacity: 0;
+  }
+}
+
+.progress-bar-experience {
+  background-color: @resumeColor;
+}
+
+.progress {
+  height: 15px;
+  background-color: @bubble-progress-bg-color;
+  .box-shadow(none);
+  .borderRadius(@border-radius);
+}
+
+.progress-bar {
+  .box-shadow(none);
+  .borderRadius(@border-radius);
+}
+
+.portfolio-menu {
+  padding: 0;
+  margin: 5px 0 30px 0px;
+  list-style: none;
+  position: relative;
+
+  li {
+    display: inline-block;
+    min-height: 30px;
+    //padding: 5px 10px;
+    margin-right: 15px;
+    .borderRadius(@border-radius);
+    color: @portfolioColor;
+    font-size: 16px;
+    min-width: 60px;
+    text-align: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    @media (max-width: 320px), (max-width: 360px) {
+      margin-right: 6px;
+      margin-bottom: 3px;
+      padding: 5px 6px;
+    }
+
+    &.hover,
+    &.active {
+      background-color: @portfolioColor;
+      color: #ffffff;
+      a {
+        color: white;
+      }
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      color: @portfolio-link-color;
+      //font-weight: 600;
+      text-decoration: none;
+
+      @media (max-width: 320px), (max-width: 360px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#contact {
+  margin-top: -65px;
+  padding-top: 65px;
+  margin-bottom: 50px;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @contactColor;
+    font-weight: normal;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  #gMap {
+    width: 100%;
+    height: 250px;
+    border: 2px solid #7F7F7F;
+    margin-bottom: 30px;
+  }
+
+  .contact-info {
+    border-right: 5px solid @border-color;
+    margin-bottom: 45px;
+    padding-bottom: 20px;
+  }
+
+  i {
+    color: @contactColor;
+    font-size: 16px;
+    float: left;
+    margin-right: 15px;
+  }
+  p {
+    margin-left: 30px;
+    span {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: @header-text-color;
+    }
+  }
+
+  #contact-form {
+    .form-group {
+      float: left;
+      width: 31%;
+      margin-right: 7px;
+      @media (max-width: 320px), (max-width: 360px) {
+        width: 30%;
+      }
+    }
+
+    .form-textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      margin-right: 0;
+      padding-right: 15px;
+      @media (max-width: 320px), (max-width: 360px) {
+        padding-right: 13px;
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
+
+  textarea,
+  input {
+    .borderRadius(0);
+    .box-shadow(none);
+  }
+
+  .contact-btn {
+    .borderRadius(0);
+    background-color: @contactColor;
+    color: white;
+    font-weight: 600;
+    margin-right: 15px;
+    @media (max-width: 320px), (max-width: 360px) {
+      margin-right: 13px;
+    }
+  }
+
+}
+
+.footer {
+  //height: 50px;
+  background-color: @footer-bg-color;
+  color: white;
+
+  a,
+  a:visited {
+    color: white;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+
+  p {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 15px 0px;
+    margin-bottom: 0;
+
+    @media (max-width: 480px),(max-width: 640px)  {
+      text-align: center;
+    }
+
+    @media (max-width: 320px), (max-width: 360px) {
+      font-size: 12px;
+    }
+  }
+}
+
+@media all {
+  ::selection {
+    color: #ffffff;
+    background: @profileColor;
+  }
+}

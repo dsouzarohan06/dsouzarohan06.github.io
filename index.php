@@ -1,0 +1,808 @@
+<?php
+$username=$email=$message="";
+$username_error=$email_error=$message_error="";
+$error=false;
+if(isset($_POST['submit']))
+{
+if(!empty($_POST['contact-name']))
+{
+$username=$_POST['contact-name'];
+}
+else
+{
+$username_error="Please enter a valid username";
+$error=true;
+}
+if(!empty($_POST['contact-email']))
+{
+$email=$_POST['contact-email'];
+}
+else
+{
+$email_error="Please enter a valid email address";
+$error=true;
+}
+if(!empty($_POST['contact-message']))
+{
+$message=$_POST['contact-message'];
+}
+else
+{
+$message_error="Please enter a message";
+$error=true;
+}
+
+if($error==false)
+{
+mysql_connect("localhost", "u425068534_users", "stxaviers123") or die("Mysql Connection Error");
+mysql_select_db("u425068534_rohan") or die("Database Connection Error");
+
+$insert_data=mysql_query("insert into users(`username`, `email`, `message`) values ('".$username."', '".$email."', '".$message."')");
+if(isset($insert_data))
+{
+$success_message="Data inserted successfully";
+}
+}
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rohan Dsouza</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+        
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-144x144-precomposed.png">
+    <link rel="alternate" type="application/rss+xml" title="Latest snippets from Bootsnipp.com" href="http://bootsnipp.com/feed.rss" />
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://bootsnipp.com/dist/bootsnipp.min.css?ver=7d23ff901039aef6293954d33d23c066">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+
+
+
+.panel-pricing {
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+.panel-pricing:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+.panel-pricing .panel-heading {
+  padding: 20px 10px;
+}
+.panel-pricing .panel-heading .fa {
+  margin-top: 10px;
+  font-size: 58px;
+}
+.panel-pricing .list-group-item {
+  color: #777777;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+.panel-pricing .list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.panel-pricing .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.panel-pricing .panel-body {
+  background-color: #f0f0f0;
+  font-size: 40px;
+  color: #777777;
+  padding: 20px;
+  margin: 0px;
+}
+
+
+</style>
+
+<!--Google Analytics
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88369164-1', 'auto');
+  ga('send', 'pageview');
+</script>-->
+
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css"/>
+
+    <!--Default Theme-->
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <!--Theme Selection
+    <?php
+        if (isset($theme)) {
+            echo "<link rel=\"stylesheet\" href=\"css/theme-" . $theme . ".css\"/>";
+        }
+    ?>-->
+    <link rel="stylesheet" href="css/theme-dark.css"/>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!--Favicon-->
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
+    <!--Javascript-->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.gmap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.smoothScroll.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</head>
+<body>
+
+<!--Theme Changer-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#theme-changer").click(function() {
+            if ($(this).hasClass('closed'))
+            {
+                $(this).animate({'right': 0});
+                $(this).removeClass('closed');
+                $(this).addClass('open');
+            } else {
+                $(this).animate({'right': "-185px"});
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+            }
+        });
+    });
+</script>
+<style type="text/css">
+    #theme-changer {
+        position: fixed;
+        background: #E2E2E2;
+        top: 200px;
+        right: -185px;
+        width: 185px;
+        height: 165px;
+        padding: 5px 15px;
+        z-index: 1002;
+    }
+    #theme-gear {
+        position: absolute;
+        top: 0;
+        left: -35px;
+        width: 35px;
+        height: 35px;
+        background: #868686;
+        font-size: 22px;
+        color: #ffffff;
+        padding: 1px 8px;
+        cursor: pointer;
+    }
+    #theme-changer a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    #theme-changer a.default {
+        margin-bottom: 10px;
+        margin-right: 25px;
+    }
+    .theme-item-bg {
+        width: 20px;
+        height: 20px;
+        background: #F6F6F6;
+    }
+    .theme-item-bg.default {
+        width: 40px;
+        height: 40px;
+    }
+    .theme-item-bg.darkbg {
+        background: #282828;
+    }
+    .theme-item {
+        margin-left: 5px;
+        margin-top: -15px;
+        width: 20px;
+        height: 20px;
+        background: #00aaff;
+    }
+    .theme-item.default {
+        margin-left: 10px;
+        margin-top: -30px;
+        width: 40px;
+        height: 40px;
+    }
+    .theme-item.default-light {
+        background: #878787;
+    }
+    .theme-item.default-dark {
+        background: #878787;
+    }
+    .theme-item.light-blue {
+        background: #00aaff;
+    }
+    .theme-item.light-green {
+        background: #4ae2b1;
+    }
+    .theme-item.green {
+        background: #23a31d;
+    }
+    .theme-item.purple {
+        background: #9018C5;
+    }
+    .theme-item.red {
+        background: #E32B1D;
+    }
+</style>
+<div id="theme-changer" class="closed">
+    <!--<div id="theme-gear">
+        <i class="fa fa-gear"></i>
+    </div>
+    <p>Theme Switcher</p>-->
+    <a href="." class="default"><div class="theme-item-bg default"></div><div class="theme-item default default-light"></div></a>
+    <a href="?theme=dark" class="default"><div class="theme-item-bg default darkbg"></div><div class="theme-item default default-dark"></div></a>
+    <!--Light-->
+    <a href="?theme=light-blue"><div class="theme-item-bg"></div><div class="theme-item light-blue"></div></a>
+    <a href="?theme=light-green"><div class="theme-item-bg"></div><div class="theme-item light-green"></div></a>
+    <a href="?theme=light-purple"><div class="theme-item-bg"></div><div class="theme-item purple"></div></a>
+    <a href="?theme=light-red"><div class="theme-item-bg"></div><div class="theme-item red"></div></a>
+    <!--Dark-->
+    <a href="?theme=dark-blue"><div class="theme-item-bg darkbg"></div><div class="theme-item"></div></a>
+    <a href="?theme=dark-green"><div class="theme-item-bg darkbg"></div><div class="theme-item green"></div></a>
+    <a href="?theme=dark-purple"><div class="theme-item-bg darkbg"></div><div class="theme-item purple"></div></a>
+    <a href="?theme=dark-red"><div class="theme-item-bg darkbg"></div><div class="theme-item red"></div></a>
+</div>
+<!--End Theme Changer-->
+
+<!--Wrapper-->
+<div id="wrapper">
+<!--Social Links-->
+<div class="container social-links hidden-xs">
+    <ul>
+        <li><a href="#contact"><i class="fa fa-rss"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/rohan-dsouza"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-github"></i></a></li>
+
+    </ul>
+</div>
+<div class="clearfix"></div>
+<!--Container-->
+<div class="container page-body">
+<!--Page Header-->
+<div class="row page-head">
+    <div class="col-sm-12 col-md-12">
+        <div class="profile-pic">
+            <img src="images/profile_b.png" width="181" height="181" alt="Profile picture."/>
+        </div>
+        <div class="tagline">Rohan Dsouza<span>Moving forward, one step at a time.</span></div>
+        <div class="clearfix"></div>
+        <div class="jobtag">
+            <span>Linux System Administrator | Cyber Security Analyst</span>
+        </div>
+    </div>
+    <!--Navigation-->
+    <div class="nav-wrapper">
+        <div class="nav-bar">
+            <ul>
+                <li class="nav-item profile-bg">
+                    <a href="#profile">
+                        <div class="oval"><i class="fa fa-home"></i><span>Profile</span></div>
+                    </a>
+                </li>
+                <li class="nav-item resume-bg">
+                    <a href="#resume">
+                        <div class="oval"><i class="fa fa-file-text"></i><span>Resume</span></div>
+                    </a>
+                </li>
+                <li class="nav-item portfolio-bg">
+                    <a href="#portfolio">
+                        <div class="oval"><i class="fa fa-video-camera"></i><span>Certification's</span></div>
+                    </a>
+                </li>
+                <li class="nav-item contact-bg">
+                    <a href="#contact">
+                        <div class="oval"><i class="fa fa-envelope"></i><span>Contact</span></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div><!--End Navigation -->
+</div> <!--End Page Header -->
+
+
+<!--Profile-->
+<div id="profile" class="nav-target">
+    <div class="row">
+        <div class="col-sm-12 col-md-offset-1 col-md-10">
+            <div class="info">My name is Rohan Dsouza. Currently working as a Linux System Administrator at <a href="https://endurance.com/">Endurance International Group.</a> My skills include setting up Linux Servers from the scratch and post setting up, managing them. In-depth knowledge of DNS, Apache, MySQL, FTP, NFS, Samba, ISCSI etc. Good knowledge of Application and Network based security.
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!--Profile Information-->
+        <div class="col-xs-12 col-sm-3 col-md-offset-1 col-md-3">
+            <h2>Profile</h2>
+
+            <h3>Information</h3>
+
+            <div class="profile-information">
+                <div class="item">Name: <span>Rohan Dsouza</span></div>
+                <div class="item">Age: <span>22</span></div>
+                <div class="item">From: <span>India</span></div>
+                <div class="item">Lives In: <span>Mumbai, Maharashtra</span></div>
+                <div class="item">Likes:
+                    <ul class="tag-area">
+                        <li>Linux</li>
+                        <li>Security</li>
+                        <li>Scripting</li>
+                        <li>Networks</li>
+                        <li>Automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!--End Profile Information -->
+        <div class="col-xs-12 col-sm-4 col-md-offset-1 col-md-3">
+            <!--Profile Skills Section 1-->
+            <div class="profile-skills">
+                <h2>&nbsp;</h2>
+
+                <h3>Skills</h3>
+
+                <div class="skill-item">
+                    <h5>MySQL</h5>
+                    <ul class="progress-bubbles color-bg-profile" data-fill-level="7"></ul>
+                    <p></p>
+                </div>
+                <div class="skill-item">
+                    <h5>Bash Scripting</h5>
+                    <ul class="progress-bubbles color-bg-profile" data-fill-level="5"></ul>
+                    <p></p>
+                </div>
+                <div class="skill-item">
+                    <h5>HTML / CSS</h5>
+                    <ul class="progress-bubbles color-bg-profile" data-fill-level="6"></ul>
+                    <p></p>
+                </div>
+            </div> <!--End Profile Skills Section 1 -->
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <!--Profile Skills Section 2 -->
+            <div class="profile-skills">
+                <h2 class="hidden-xs">&nbsp;</h2>
+                <h3 class="hidden-xs">&nbsp;</h3>
+
+                <div class="skill-item">
+                    <h5>Malware Analysis</h5>
+                    <ul class="progress-bubbles color-bg-profile" data-fill-level="5"></ul>
+                    <p></p>
+                </div>
+                <div class="skill-item">
+                    <h5>Python</h5>
+                    <ul class="progress-bubbles color-bg-profile" data-fill-level="4"></ul>
+                    <p></p>
+                </div>
+                <div class="skill-item">
+                    <h5>Linux Server Administration</h5>
+                    <ul class="progress-bubbles color-bg-profile" data-fill-level="8"></ul>
+                    <p></p>
+                </div>
+            </div> <!--End Profile Skills Section 2 -->
+        </div>
+    </div>
+</div>
+<!--End Profile-->
+
+<!--Resume-->
+<div id="resume" class="nav-target">
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-offset-1 col-md-5">
+            <h2>Resume</h2>
+
+            <!--Education-->
+            <div class="resume-edu">
+                <h5>Education</h5>
+                <div class="timeline-item">
+                    <div class="date">
+                        <div class="dot"></div>
+                        <span>June 2012 - May 2015</span>
+                    </div>
+                    <h5 class="timeline-title"><a href="http://xaviers.edu/">St. Xavier's College-Autonomous, Mumbai</a></h5>
+                    <p>Bachelor of Science in Information Technology</p>
+
+                    <p>Donec blandit aliquam enim ac adipiscing. Quisque tempus lacus quis volutpat mattis. Quisque vel
+                        gravida massa, et pharetra lacus. Nulla facilisi.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">
+                        <div class="dot"></div>
+                        <span>August 2010 - May 2012</span>
+                    </div>
+                    <h5 class="timeline-title">Nirmala Memorial Foundation College of Commerce & Science</h5>
+
+                    <p>Donec blandit aliquam enim ac adipiscing. Quisque tempus lacus quis volutpat mattis. Quisque vel
+                        gravida massa, et pharetra lacus. Nulla facilisi. Duis nisi dui, dapibus non facilisis eu,
+                        laoreet nec sapien. Fusce in tellus luctus, adipiscing est ac, molestie dui.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">
+                        <div class="dot"></div>
+                        <span>June 2004 - June 2010</span>
+                    </div>
+                    <h5 class="timeline-title">St. Don Bosco High School</h5>
+
+                    <p>Sed accumsan euismod velit et adipiscing. Vivamus pretium velit in metus accumsan, sed rhoncus
+                        odio porttitor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                        Curae; Pellentesque ac enim nisi. Proin laoreet tortor sit amet nibh tristique malesuada.
+                        Quisque euismod dictum imperdiet. Cras et bibendum nibh.</p>
+                </div>
+            </div> <!--End Education -->
+        </div>
+
+        <!--Work-->
+        <div class="col-md-5 col-md-offset-0 col-sm-offset-1 col-xs-12 col-sm-5">
+            <div class="resume-work">
+                <h5>Work</h5>
+                <div class="timeline-item">
+                    <div class="date">
+                        <div class="dot"></div>
+                        <span>March 2017</span>
+                    </div>
+                    <h5 class="timeline-title">Directi, <a href="https://endurance.com/">Endurance International Group</a></h5>
+                    <span class="job-title">Linux System Administrator</span>
+
+                    <p>Donec blandit aliquam enim ac adipiscing. Quisque tempus lacus quis volutpat mattis. Quisque vel
+                        gravida massa, et pharetra lacus. Nulla facilisi.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">
+                        <div class="dot"></div>
+                        <span>June 2015</span>
+                    </div>
+                    <h5 class="timeline-title">Directi, <a href="https://endurance.com/">Endurance International Group</a></h5>
+                    <span class="job-title">Cyber Security Analyst</span>
+
+                    <p>Donec blandit aliquam enim ac adipiscing. Quisque tempus lacus quis volutpat mattis. Quisque vel
+                        gravida massa, et pharetra lacus. Nulla facilisi.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">
+                        <div class="dot"></div>
+                        <span>2013</span>
+                    </div>
+                    <h5 class="timeline-title">Prayas Kendra</h5>
+                    <span class="job-title">Social worker</span>
+
+                    <p>Prayas Kendra is a welfare centre run by the salesian father’s in St. John Bosco church, Borivali. Used to teach under privileged children from the 5th to the 10th grade.</p>
+                </div>
+            </div> <!--End Work -->
+        </div>
+    </div>
+
+    <!--Experience-->
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="resume-experience">
+                <h2>Experience</h2>
+
+                <!--Experience Item-->
+                <div class="experience-item">
+                    <p>Linux Server Administration</p>
+
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-experience" role="progressbar" data-value="80"
+                             aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only">80% Complete (success)</span>
+                        </div>
+                    </div>
+                </div> <!-- End Experience Item -->
+
+                <div class="experience-item">
+                    <p>MySQL</p>
+
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-experience" role="progressbar" data-value="70"
+                             aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only">70% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <p>Networks</p>
+
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-experience" role="progressbar" data-value="75"
+                             aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only">75% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <p>Cyber Security</p>
+
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-experience" role="progressbar" data-value="65"
+                             aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only">65% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Experience -->
+
+    <!--Other Experience-->
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="other-experience">
+                <h5>Other Experience</h5>
+                <ul class="tag-area">
+                    <li>C#</li>
+                    <li>Visual Studio</li>
+                    <li>.NET</li>
+                    <li>Networking</li>
+                    <li>Python</li>
+                    <li>Android</li>
+                    <li>Linux</li>
+                    <li>Windows</li>
+                    <li>GIT</li>
+                    <li>MariaDB</li>
+                    <li>Puppet</li>
+                    <li>Nagios</li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- End Other Experience -->
+</div> <!-- End Resume -->
+
+<!--Portfolio-->
+<div id="portfolio" class="nav-target">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <h2>Certification's</h2><br>
+
+ <!-- Plans -->
+    <section id="plans">
+        <div class="container">
+            <div class="row">
+
+
+                <!-- item -->
+                <div class="col-md-3 text-center" style="width: 250px; ">
+                    <div class="panel panel-warning panel-pricing" style="border: 1px solid black;">
+                        <div class="panel-heading" style="background-color: #333; border: 1px solid black;">
+                           <!-- <i class="fa fa-desktop"></i> -->
+<a href="1480958988570-793593050_185x114.jpg" class="popbox">
+                        <img src="1480958988570-793593050_185x114.jpg" alt="Portfolio Image" />
+                    </a>
+                            <!-- <h3>Red Hat Certified System Administrator</h3> -->
+                        </div>
+                        
+                    
+						<span style="height: 210px; background-color: #333;"><p class="list-group-item" style="border: 1px solid black; font-size: 14px; color: white; background-color: #333;">
+						Red Hat Certified Engineer(RHCE) is a System Administrator who possesses the additional skills, knowledge, and abilities required of a senior system administrator responsible for RHEL systems.
+						</p></span>	
+						
+						
+                    </div>
+                </div>
+
+                <!-- /item -->
+
+               
+
+                <!-- item -->
+                <div class="col-md-3 text-center" style="width: 250px;">
+                    <div class="panel panel-warning panel-pricing" style="border: 1px solid black;">
+                        <div class="panel-heading" style="background-color: #333; border: 1px solid black;">
+                            <!-- <i class="fa fa-list-alt"></i> -->
+<a href="latest-ccna-logo.jpg_185x185.jpg" class="popbox">
+                        <img src="latest-ccna-logo.jpg_185x185.jpg" alt="Portfolio Image" style="height: 115px; width: 185px;"/>
+                    </a>
+                            <!-- <h3>CCNA (Cisco Certified Network Associate)</h3> -->
+                        </div>
+                        
+						<span style="background-color: #333 border: 1px solid black;"><p class="list-group-item" style="font-size: 14px; color: white; background-color: #333; border: 1px solid black;">
+						CCNA (Cisco Certified Network Associate) is an IT certification from Cisco. CCNA certification is an associate-level Cisco Career certification. The Cisco exams have changed several times. 
+						</p></span>
+                        
+                    </div>
+                </div>
+                <!-- /item -->
+
+ <!-- item -->
+                <div class="col-md-3 text-center" style="width: 250px;">
+                    <div class="panel panel-danger panel-pricing" style="border: 1px solid black;">
+                        <div class="panel-heading" style="background-color: #333; border: 1px solid black;">
+                          <!-- <i class="fa fa-check-square-o"></i> -->
+                            <a href="unfurl14807061114030552_185x115.png" class="popbox">
+                        <img src="unfurl14807061114030552_185x115.png" alt="Portfolio Image"/></a>
+                        </div>
+                      
+                       
+						<span style="height: 210px; background-color: #333;"><p class="list-group-item" style="border: 1px solid black;  font-size: 14px; border: 1px solid black; background-color: #333; color: white;">
+						Certified Ethical Hacker (CEH) is a qualification obtained by assessing the security of computer systems, using penetration testing techniques. The code for the CEH exam is 312-50.
+
+						</p></span>
+                       
+                    </div>
+                </div>
+                <div class="col-md-3 text-center"></div>
+                <!-- /item -->
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- /Plans -->
+
+            <!--Portfolio Menu 
+            <ul class="portfolio-menu">
+                <li class="active"><a href="#" data-filter="*">Everything</a></li>
+                <li><a href="#" data-filter=".photos">Photos</a></li>
+                <li><a href="#" data-filter=".videos">Videos</a></li>
+                <li><a href="#" data-filter=".sites">Sites</a></li>
+            </ul> End Portfolio Menu 
+            <ul id="portfolio-container">
+
+
+                <li class="portfolio-item photos">
+                    
+                </li>
+                <li class="portfolio-item sites">
+                    
+                </li>
+                <li class="portfolio-item sites videos">
+                   
+                </li> -->
+
+
+
+                  <!--<li class="portfolio-item sites">
+ <a href="unfurl14807061114030552_185x115.png" class="popbox">
+                        <img src="unfurl14807061114030552_185x115.png" alt="Portfolio Image"/>
+                    </a>
+                      <p><blockquote>Certified Ethical Hacker (CEH) is a qualification obtained by assessing the security of computer systems, using penetration testing techniques. The code for the CEH exam is 312-50, and the certification is in Version 9 as of 2016. [1][2]
+
+Penetration tests are employed by organizations that hire certified ethical hackers to penetrate networks and computer systems with the purpose of finding and fixing security vulnerabilities. While unauthorized hacking, also known as Black Hat hacking, is illegal, penetration testing done at the request of the owner of the targeted systems is not </blockquote></p>
+                    
+                </li>
+                 <li class="portfolio-item sites videos">
+<a href="latest-ccna-logo.jpg_185x185.jpg" class="popbox">
+                        <img src="latest-ccna-logo.jpg_185x185.jpg" alt="Portfolio Image" style="height: 115px; width: 185px;"/>
+                    </a>
+                    <p><blockquote>CCNA (Cisco Certified Network Associate) is an IT certification from Cisco. CCNA certification is an associate-level Cisco Career certification.
+
+The Cisco exams have changed several times. In 2013, Cisco announced an update to its certification program that "aligns certification and training curricula with evolving industry job roles."[1] There are now several different types of Cisco-Certified Network Associate, with "CCNA Routing and Switching" being closest to the original CCNA focus; other types of CCNA focus on security, collaboration, datacentres, service providers, video, voice, and wireless </blockquote></p>
+                </li>
+                <li class="portfolio-item sites photos">
+<a href="1480958988570-793593050_185x114.jpg" class="popbox">
+                        <img src="1480958988570-793593050_185x114.jpg" alt="Portfolio Image" />
+                    </a>
+                    <p><blockquote>Red Hat Certified System Administrator (RHCSA)
+RHCSA is an entry-level certification that focuses on actual competencies at system administration, including installation and configuration of a Red Hat Enterprise Linux system and attach it to a live network running network services.
+
+To achieve the RHCSA certification the student must pass EX200, a 2.5-hour hands-on lab exam. The minimum passing score for the exam is 210 out of 300 possible points (70%).[4] There is no prerequisite for the exam, but Red Hat recommends preparing for the exam by taking courses in Red Hat System Administration (RH124 or RH134) if one does not have previous experience </blockquote></p>
+                </li>
+                <!-- <li class="portfolio-item photos">
+                    <a href="images/img_preview.png" class="popbox">
+                        <img src="images/img_preview.png" alt="Portfolio Image"/>
+                    </a>
+                </li>
+                <li class="portfolio-item photos">
+                    <a href="images/img_preview.png" class="popbox">
+                        <img src="images/img_preview.png" alt="Portfolio Image"/>
+                    </a>
+                </li>
+            </ul> 
+        </div>
+    </div> -->
+</div> <!-- End Portfolio -->
+
+<!--Contact-->
+<div id="contact" class="nav-target">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <h2>Contact</h2>
+
+
+            <div id="gMaps">
+<iframe width="100%" height="50%" frameborder="0" scrolling="no" marginheight="0" src="https://maps.google.com/maps?q=Yogi Nagar, Borivali West, Mumbai, Maharashtra 400091, &t=&z=14&ie=UTF8&iwloc=&output=embed" marginwidth="0"><a class="addmaps" href="http://www.map-embed.com/add-facebook-like-button/"id="get-map-data" mce_href="http://maps.google.com/maps/api/js?sensor=false">map-embed.com</a><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></iframe>
+         </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 col-md-offset-1 col-md-4 contact-info">
+            <h3>Contact Information</h3>
+
+            <div class="contact-address">
+                <i class="fa fa-user"></i>
+
+                <!-- Contact Map Address -->
+                <p>
+                    <span>Rohan Dsouza</span>
+                    Mumbai <br/>
+                    Maharashtra, India
+                </p>
+                <!-- End Contact Map Address -->
+            </div>
+            <div class="contact-phone">
+                <i class="fa fa-phone"></i>
+
+                <p>
+                    +91 98199#####
+                </p>
+            </div>
+            <div class="contact-email">
+                <i class="fa fa-envelope"></i>
+
+                <p>
+                    <a href="mailto:enquiries@rohaninfo.tk"> enquiries@rohaninfo.tk </a><br/>
+                    <a href="http://www.rohaninfo.tk" target="_blank"> http://www.rohaninfo.tk </a>
+                </p>
+            </div>
+        </div>
+
+        <!--Contact Form-->
+        <div class="col-sm-7 col-md-6 contact-form">
+            <h3>Send feedback</h3>
+
+            <form action="" method="post" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="contact-name">Your Name</label>
+                    <input id="contact-name" class="form-control" value="<?php echo $username;?>" placeholder="Name" name="contact-name" type="text" style="width: 464px; color: white;"/>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="contact-email">Email address</label>
+                    <input id="contact-email" class="form-control" value="<?php echo $email;?>" placeholder="Valid Email" name="contact-email"
+                           type="text" style="width: 464px; color: white;"/>
+                </div>
+                <div class="form-group form-textarea">
+                    <textarea class="form-control" rows="4" name="contact-message" style="color: white;" placeholder="Message"><?php echo $message;?></textarea>
+                </div>
+                <div class="clearfix"></div>
+<?php if(isset($success_message)){echo "<blockquote>".$success_message."</blockquote>";}?>
+                <div class="pull-right">
+                    <input type="submit" class="btn contact-btn" name="submit" value="Send Message">
+                </div>
+
+            </form>
+        </div> <!--End Contact Form -->
+    </div>
+</div> <!-- End Contact -->
+</div><!--End Container-->
+
+<!--Footer Container-->
+<div class="container footer" style="width: 900px;">
+    <p class="col-xs-12">&copy;2016 All Rights Reserved. Rohan Dsouza </p>
+</div> <!--End Footer Container -->
+</div> <!--End Wrapper -->
+
+</body>
+</html>
+			

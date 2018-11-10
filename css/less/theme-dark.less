@@ -1,0 +1,341 @@
+/*
+
+Flatrok LESS Layout and Dark Theme
+Author: Chris Brame
+Version: 1.0
+Date: Nov 18th, 2013
+
+*/
+
+
+//Global Settings
+@bg-color: #141414;
+@page-bg-color: #282828;
+@primary-text-color: #878787;
+@header-text-color: #FFFFFF;
+@tag-line-color: #4CA5D0;
+@border-color: #545454;
+
+@link-color: #00aaff;
+@link-hover-color: #FFFFFF;
+
+
+@profileColor: #00aaff;
+//@resumeColor: #6CC518;
+@resumeColor: #23a31d;
+@portfolioColor: #9018C5;
+@portfolio-link-color: #ffffff;
+@contactColor: #e32c1d;
+@footer-bg-color: #474747;
+@footer-social-link-color: #F6F6F6;
+@footer-social-link-hover-color: #c0c0c0;
+
+@text-gray: #7C7C7C;
+@text-darker-gray: #ffffff;
+
+@border-radius: 3px;
+
+@bubble-progress-bg-color: #4c4c4c;
+@text-box-bg-color: #3e3e3e;
+@text-box-border-color: #545454;
+
+body {
+  color: @primary-text-color;
+  background: @bg-color;
+  //background: url('../images/honeycomb.png') repeat;
+}
+
+a, a:visited {
+  color: @link-color;
+  &:active,
+  &:hover {
+    color: @link-hover-color;
+  }
+}
+
+.social-links.social-footer {
+
+  ul {
+
+    li {
+
+      a {
+        color: @footer-social-link-color;
+
+        &:active,
+        &:hover {
+          color: @footer-social-link-hover-color;
+        }
+      }
+    }
+  }
+}
+
+.social-links {
+  @media (max-width: 768px) {
+    background: @page-bg-color;
+  }
+
+  ul {
+
+    li {
+
+      a {
+        color: @primary-text-color;
+
+        &:hover,
+        &:active {
+          color: #FFFFFF;
+        }
+      }
+
+    }
+  }
+}
+
+.page-body {
+  background: @page-bg-color;
+}
+
+.page-head {
+
+  .tagline {
+    color: @header-text-color;
+
+    span {
+      color: @tag-line-color;
+
+      &:before {
+        color: @tag-line-color;
+      }
+
+      &:after {
+        color: @tag-line-color;
+      }
+    }
+  }
+
+  .jobtag {
+
+    span {
+      background: @profileColor;
+      color: #FFFFFF;
+    }
+  }
+
+  .profile-bg {
+    background: @profileColor !important;
+  }
+
+  .resume-bg {
+    background: @resumeColor !important;
+  }
+
+  .portfolio-bg {
+    background: @portfolioColor !important;
+  }
+
+  .contact-bg {
+    background: @contactColor !important;
+  }
+
+  .nav-bar {
+
+    ul {
+
+      li.nav-item {
+        background: @profileColor;
+
+        a {
+          color: white;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+#profile {
+  h2,
+  h3 {
+    color: @profileColor;
+  }
+
+  .profile-information {
+    color: @primary-text-color;
+
+    .item {
+
+      span {
+        font-weight: bold;
+        color: @text-gray;
+      }
+    }
+  }
+
+  .profile-skills {
+
+    .skill-item {
+      color: @text-gray;
+
+      h5 {
+        color: @header-text-color;
+      }
+    }
+  }
+}
+
+ul.progress-bubbles {
+
+  li {
+    background: @bubble-progress-bg-color;
+
+    &.filled-bg {
+      background: @profileColor;
+    }
+
+  }
+}
+
+//RESUME
+#resume {
+
+  h2,
+  h3,
+  h5 {
+    color: @resumeColor;
+  }
+
+  .resume-edu {
+    border-left: 3px solid @border-color;
+  }
+
+  .timeline-item {
+
+    .timeline-title {
+      color: @header-text-color;
+    }
+
+    .date {
+      color: #fff;
+
+      span {
+        background: @resumeColor;
+      }
+
+      .dot {
+        background: @resumeColor;
+      }
+    }
+  }
+
+  .resume-work {
+    border-left: 3px solid @border-color;
+  }
+
+  .experience-item {
+
+    p {
+      color: @header-text-color;
+    }
+  }
+
+  .other-experience ul.tag-area li {
+    background: @resumeColor;
+  }
+
+}
+
+#portfolio {
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @portfolioColor;
+  }
+
+  #portfolio-container {
+
+    .portfolio-hover-box {
+      background: @portfolioColor;
+    }
+  }
+
+}
+
+ul.tag-area {
+
+  li {
+    background: @profileColor;
+    color: #ffffff;
+  }
+}
+
+.progress-bar-experience {
+  background-color: @resumeColor;
+}
+
+.progress {
+  background-color: @bubble-progress-bg-color;
+}
+
+.portfolio-menu {
+
+  li {
+    color: @portfolioColor;
+
+    &.hover,
+    &.active {
+      background-color: @portfolioColor;
+    }
+
+    a {
+      color: @portfolio-link-color;
+    }
+  }
+}
+
+#contact {
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @contactColor;
+  }
+
+  .contact-info {
+    border-right: 5px solid @border-color;
+  }
+
+  i {
+    color: @contactColor;
+  }
+  p {
+    span {
+      color: @header-text-color;
+    }
+  }
+
+  textarea,
+  input {
+    background: @text-box-bg-color;
+    border-color: @text-box-border-color;
+  }
+
+  .contact-btn {
+    background-color: @contactColor;
+  }
+
+}
+
+.footer {
+  background-color: @footer-bg-color;
+  color: white;
+}
+
+@media all {
+  ::selection {
+    color: #ffffff;
+    background: @profileColor;
+  }
+}
