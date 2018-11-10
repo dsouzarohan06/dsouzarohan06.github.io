@@ -775,18 +775,18 @@ To achieve the RHCSA certification the student must pass EX200, a 2.5-hour hands
             <form action="" method="post" role="form">
                 <div class="form-group">
                     <label class="sr-only" for="contact-name">Your Name</label>
-                    <input id="contact-name" class="form-control" value="<?php echo $username;?>" placeholder="Name" name="contact-name" type="text" style="width: 464px; color: white;"/>
+                    <input id="contact-name" class="form-control" value="" placeholder="Name" name="contact-name" type="text" style="width: 464px; color: white;"/>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="contact-email">Email address</label>
-                    <input id="contact-email" class="form-control" value="<?php echo $email;?>" placeholder="Valid Email" name="contact-email"
+                    <input id="contact-email" class="form-control" value="" placeholder="Valid Email" name="contact-email"
                            type="text" style="width: 464px; color: white;"/>
                 </div>
                 <div class="form-group form-textarea">
-                    <textarea class="form-control" rows="4" name="contact-message" style="color: white;" placeholder="Message"><?php echo $message;?></textarea>
+                    <textarea class="form-control" rows="4" name="contact-message" style="color: white;" placeholder="Message"></textarea>
                 </div>
                 <div class="clearfix"></div>
-<?php if(isset($success_message)){echo "<blockquote>".$success_message."</blockquote>";}?>
+<?php if(isset($success_message)){echo "<blockquote>""</blockquote>";}?>
                 <div class="pull-right">
                     <input type="submit" class="btn contact-btn" name="submit" value="Send Message">
                 </div>
